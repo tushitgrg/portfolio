@@ -5,19 +5,17 @@ import { CanvasRevealEffect } from "./ui/CanvasRevealEffect";
 
 const Approach = () => {
   return (
-    <section className="w-full py-20">
+    <section className="w-full py-20" id="projects">
       <h1 className="heading">
-        My <span className="text-purple">approach</span>
+        Our <span className="text-purple">approach</span>
       </h1>
       {/* remove bg-white dark:bg-black */}
       <div className="my-20 flex flex-col lg:flex-row items-center justify-center w-full gap-4">
         {/* add des prop */}
         <Card
-          title="Planning & Strategy"
+          title="Discovery & Strategy"
           icon={<AceternityIcon order="Phase 1" />}
-          des="We'll collaborate to map out your website's goals, target audience, 
-          and key functionalities. We'll discuss things like site structure, 
-          navigation, and content requirements."
+          des="We begin by understanding your unique vision, goals, and challenges. Through in-depth research and consultation, we develop a tailored strategy that aligns with your business objectives."
         >
           <CanvasRevealEffect
             animationSpeed={5.1}
@@ -26,11 +24,10 @@ const Approach = () => {
           />
         </Card>
         <Card
-          title="Development & Progress Update"
+          title="Execution & Creation"
           icon={<AceternityIcon order="Phase 2" />}
-          des="Once we agree on the plan, I cue my lofi playlist and dive into
-          coding. From initial sketches to polished code, I keep you updated
-          every step of the way."
+          des="With a clear strategy in place, we move to executing the plan—designing, developing, and implementing the solutions that will bring your brand to life across various platforms. This phase involves continuous feedback and collaboration to ensure we're on the right path.
+"
         >
           <CanvasRevealEffect
             animationSpeed={3}
@@ -48,11 +45,10 @@ const Approach = () => {
           {/* <div className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" /> */}
         </Card>
         <Card
-          title="Development & Launch"
+          title="Optimization & Growth"
           icon={<AceternityIcon order="Phase 3" />}
-          des="This is where the magic happens! Based on the approved design, 
-          I'll translate everything into functional code, building your website
-          from the ground up."
+          des="Once your project is live, we focus on ongoing optimization to maximize results. Using data and analytics, we refine strategies, improve user experience, and drive continuous growth to ensure long-term success.
+"
         >
           <CanvasRevealEffect
             animationSpeed={3}

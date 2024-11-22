@@ -11,6 +11,7 @@ import { BackgroundGradientAnimation } from "./GradientBg";
 import GridGlobe from "./GridGlobe";
 import animationData from "@/data/confetti.json";
 import MagicButton from "../MagicButton";
+import { AnimatedTestimonialsDemo } from "./testinomials";
 
 export const BentoGrid = ({
   className,
@@ -52,8 +53,8 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
 }) => {
-  const leftLists = ["ReactJS", "Express", "Typescript"];
-  const rightLists = ["VueJS", "NuxtJS", "GraphQL"];
+  const leftLists = ["Vision", "Engagement", "Success"];
+  const rightLists = ["Growth", "Innovation", "Experience"];
 
   const [copied, setCopied] = useState(false);
 
@@ -76,7 +77,7 @@ export const BentoGridItem = ({
     <div
       className={cn(
         // remove p-4 rounded-3xl dark:bg-black dark:border-white/[0.2] bg-white  border border-transparent, add border border-white/[0.1] overflow-hidden relative
-        "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4",
+        "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-center flex flex-col space-y-4",
         className
       )}
       style={{
@@ -98,10 +99,18 @@ export const BentoGridItem = ({
             />
           )}
         </div>
+
+
+        {id===5?<div >
+<AnimatedTestimonialsDemo/>
+</div>:''}
+
+
         <div
           className={`absolute right-0 -bottom-5 ${id === 5 && "w-full opacity-80"
             } `}
         >
+        
           {spareImg && (
             <img
               src={spareImg}
@@ -111,6 +120,8 @@ export const BentoGridItem = ({
             />
           )}
         </div>
+
+        
         {id === 6 && (
           // add background animation , remove the p tag
           <BackgroundGradientAnimation>
@@ -143,7 +154,7 @@ export const BentoGridItem = ({
           {id === 3 && (
             <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
               {/* tech stack lists */}
-              <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
+              <div className="flex ml-2 flex-col gap-3 md:gap-3 lg:gap-8">
                 {leftLists.map((item, i) => (
                   <span
                     key={i}
